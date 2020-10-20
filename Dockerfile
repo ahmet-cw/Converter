@@ -1,5 +1,5 @@
-FROM node:12-alpine
-WORKDIR /app
+FROM python:3
+WORKDIR app.py/
 COPY . .
-RUN yarn install --production
-CMD ["node", "/app/src/index.js"]
+RUN pip install pystrich
+CMD [ "python", "./app.py" ]
